@@ -180,9 +180,64 @@ footer p{
     }
 }
 
+
+/* TELA DE ABERTURA */
+#welcome{
+    position:fixed;
+    inset:0;
+    background:linear-gradient(180deg,#ffdde1,#ee9ca7);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    z-index:99999;
+    padding:20px;
+    transition:opacity 1s ease;
+}
+#welcome h1{
+    font-size:2.3rem;
+    margin-bottom:25px;
+}
+#welcome button{
+    border:none;
+    padding:15px 35px;
+    border-radius:50px;
+    cursor:pointer;
+    background:white;
+    color:#ee9ca7;
+    font-size:18px;
+    font-weight:600;
+}
+
+
+.card{
+    cursor:pointer;
+}
+.card .back{
+    display:none;
+}
+.card.open .front{
+    display:none;
+}
+.card.open .back{
+    display:block;
+}
+
 </style>
 </head>
+
 <body>
+
+<div id="welcome">
+    <h1>🎁 Tenho uma surpresa para você ❤️</h1>
+    <button onclick="entrar()">Abrir Surpresa</button>
+</div>
+
+<audio id="bgMusic" loop>
+    <source src="musica.mp3" type="audio/mpeg">
+</audio>
+
 
 <!-- =====================================
 ALTERE A FOTO PRINCIPAL AQUI
@@ -197,7 +252,7 @@ ALTERE A FOTO PRINCIPAL AQUI
     <p>
         Hoje é um dia muito especial.
         Hoje você completa mais um ano de vida,
-        mais um ano que vi vc se tornar a mulher que é hoje.
+        mais um ano que vi você se tornar a mulher que é hoje.
     </p>
 </section>
 
@@ -211,34 +266,106 @@ ALTERE A FOTO PRINCIPAL AQUI
 
         <!-- ALTERE TODAS AS MENSAGENS -->
 
-        <div class="card">1. Seu sorriso</div>
-        <div class="card">2. Seu carinho</div>
-        <div class="card">3. Seu jeito único</div>
-        <div class="card">4. Sua força</div>
-        <div class="card">5. Sua inteligência</div>
-        <div class="card">6. Seu abraço</div>
-        <div class="card">7. Seu senso de humor</div>
-        <div class="card">8. Seu coração</div>
+        <div class="card" onclick="this.classList.toggle('open')">
+    <span class="front">1. Toque para revelar ❤️</span>
+    <span class="back">Seu sorriso</span>
+</div>
+        <div class="card" onclick="this.classList.toggle('open')">
+    <span class="front">2. Toque para revelar ❤️</span>
+    <span class="back">Seu carinho</span>
+</div>
+        <div class="card" onclick="this.classList.toggle('open')">
+    <span class="front">3. Toque para revelar ❤️</span>
+    <span class="back">Seu jeito único</span>
+</div>
+        <div class="card" onclick="this.classList.toggle('open')">
+    <span class="front">4. Toque para revelar ❤️</span>
+    <span class="back">Sua força</span>
+</div>
+        <div class="card" onclick="this.classList.toggle('open')">
+    <span class="front">5. Toque para revelar ❤️</span>
+    <span class="back">Sua inteligência</span>
+</div>
+        <div class="card" onclick="this.classList.toggle('open')">
+    <span class="front">6. Toque para revelar ❤️</span>
+    <span class="back">Seu abraço</span>
+</div>
+        <div class="card" onclick="this.classList.toggle('open')">
+    <span class="front">7. Toque para revelar ❤️</span>
+    <span class="back">Seu senso de humor</span>
+</div>
+        <div class="card" onclick="this.classList.toggle('open')">
+    <span class="front">8. Toque para revelar ❤️</span>
+    <span class="back">Seu coração</span>
+</div>
 
-        <div class="card">9. Seu companheirismo</div>
-        <div class="card">10. Sua dedicação</div>
-        <div class="card">11. Sua paciência</div>
-        <div class="card">12. Sua beleza</div>
+        <div class="card" onclick="this.classList.toggle('open')">
+    <span class="front">9. Toque para revelar ❤️</span>
+    <span class="back">Seu companheirismo</span>
+</div>
+        <div class="card" onclick="this.classList.toggle('open')">
+    <span class="front">10. Toque para revelar ❤️</span>
+    <span class="back">Sua dedicação</span>
+</div>
+        <div class="card" onclick="this.classList.toggle('open')">
+    <span class="front">11. Toque para revelar ❤️</span>
+    <span class="back">Sua paciência</span>
+</div>
+        <div class="card" onclick="this.classList.toggle('open')">
+    <span class="front">12. Toque para revelar ❤️</span>
+    <span class="back">Sua beleza</span>
+</div>
 
-        <div class="card">13. Sua sinceridade</div>
-        <div class="card">14. Sua coragem</div>
-        <div class="card">15. Seu olhar</div>
-        <div class="card">16. Sua voz</div>
+        <div class="card" onclick="this.classList.toggle('open')">
+    <span class="front">13. Toque para revelar ❤️</span>
+    <span class="back">Sua sinceridade</span>
+</div>
+        <div class="card" onclick="this.classList.toggle('open')">
+    <span class="front">14. Toque para revelar ❤️</span>
+    <span class="back">Sua coragem</span>
+</div>
+        <div class="card" onclick="this.classList.toggle('open')">
+    <span class="front">15. Toque para revelar ❤️</span>
+    <span class="back">Seu olhar</span>
+</div>
+        <div class="card" onclick="this.classList.toggle('open')">
+    <span class="front">16. Toque para revelar ❤️</span>
+    <span class="back">Sua voz</span>
+</div>
 
-        <div class="card">17. Seu cuidado</div>
-        <div class="card">18. Sua alegria</div>
-        <div class="card">19. Sua gentileza</div>
-        <div class="card">20. Seu apoio</div>
+        <div class="card" onclick="this.classList.toggle('open')">
+    <span class="front">17. Toque para revelar ❤️</span>
+    <span class="back">Seu cuidado</span>
+</div>
+        <div class="card" onclick="this.classList.toggle('open')">
+    <span class="front">18. Toque para revelar ❤️</span>
+    <span class="back">Sua alegria</span>
+</div>
+        <div class="card" onclick="this.classList.toggle('open')">
+    <span class="front">19. Toque para revelar ❤️</span>
+    <span class="back">Sua gentileza</span>
+</div>
+        <div class="card" onclick="this.classList.toggle('open')">
+    <span class="front">20. Toque para revelar ❤️</span>
+    <span class="back">Seu apoio</span>
+</div>
 
-        <div class="card">21. Seus sonhos</div>
-        <div class="card">22. Sua companhia</div>
-        <div class="card">23. Seu amor</div>
-        <div class="card">24. Por ser você ❤️</div>
+        <div class="card" onclick="this.classList.toggle('open')">
+    <span class="front">21. Toque para revelar ❤️</span>
+    <span class="back">Seus sonhos</span>
+</div>
+        <div class="card" onclick="this.classList.toggle('open')">
+    <span class="front">22. Toque para revelar ❤️</span>
+    <span class="back">Sua companhia</span>
+</div>
+        <div class="card" onclick="this.classList.toggle('open')">
+    <span class="front">23. Toque para revelar ❤️</span>
+    <span class="back">Seu amor</span>
+</div>
+        <div class="card" onclick="this.classList.toggle('open')">
+    <span class="front">24. Toque para revelar ❤️</span>
+    <span class="back">Por ser você ❤️</span>
+</div>
 
     </div>
 
@@ -338,6 +465,19 @@ ALTERE A FOTO PRINCIPAL AQUI
 </footer>
 
 <script>
+
+function entrar(){
+    const tela = document.getElementById("welcome");
+    const musica = document.getElementById("bgMusic");
+
+    musica.play().catch(() => {});
+
+    tela.style.opacity = "0";
+
+    setTimeout(() => {
+        tela.style.display = "none";
+    },1000);
+}
 
 /* ANIMAÇÃO AO DESCER */
 
